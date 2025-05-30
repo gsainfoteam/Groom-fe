@@ -32,7 +32,8 @@ const users = [
     gender: "남",
     major: "전기전자컴퓨터공학부",
     sleepTime: "12시~2시",
-    introduction: "자 케인 죽을만큼 시작! 주글만큼 보고~~~",
+    introduction:
+      "안녕하세요! 저는 룸메이트를 구하고 있습니다. 저는 조용한 성격이고, 청소를 잘 합니다. 함께 지내실 분을 찾습니다.",
     available: true,
   },
   {
@@ -49,7 +50,7 @@ const users = [
     studentNumber: 24,
     gender: "남",
     major: "전기전자컴퓨터공학부",
-    sleepTime: "12시~2시",
+    sleepTime: "2시~4시",
     introduction:
       "안녕하세요. 저는 조용한 성격의 학생입니다. 룸메이트를 구합니다. 저는 청소를 잘 하고, 규칙적인 생활을 좋아합니다. 함께 지내실 분을 찾습니다.",
     available: true,
@@ -59,7 +60,7 @@ const users = [
     studentNumber: 23,
     gender: "남",
     major: "전기전자컴퓨터공학부",
-    sleepTime: "12시~2시",
+    sleepTime: "10시~12시",
     introduction:
       "안녕하세요! 저는 룸메이트를 구하고 있습니다. 저는 조용한 성격이고, 청소를 잘 합니다. 함께 지내실 분을 찾습니다.",
     available: false,
@@ -79,7 +80,7 @@ const users = [
     studentNumber: 25,
     gender: "남",
     major: "전기전자컴퓨터공학부",
-    sleepTime: "10시~12시",
+    sleepTime: "2시~4시",
     introduction:
       "안녕하세요! 1년동안 같이 지낼 룸메이트 구합니다. 저는 조용한 편이고, 게임을 좋아합니다. 잘 부탁드립니다 :)",
     available: false,
@@ -87,9 +88,9 @@ const users = [
   {
     nickname: "아",
     studentNumber: 25,
-    gender: "남",
+    gender: "여",
     major: "전기전자컴퓨터공학부",
-    sleepTime: "10시~12시",
+    sleepTime: "12시~2시",
     introduction:
       "안녕하세요! 1년동안 같이 지낼 룸메이트 구합니다. 저는 조용한 편이고, 게임을 좋아합니다. 잘 부탁드립니다 :)",
     available: true,
@@ -99,7 +100,7 @@ const users = [
     studentNumber: 25,
     gender: "남",
     major: "전기전자컴퓨터공학부",
-    sleepTime: "10시~12시",
+    sleepTime: "2시~4시",
     introduction:
       "안녕하세요! 1년동안 같이 지낼 룸메이트 구합니다. 저는 조용한 편이고, 게임을 좋아합니다. 잘 부탁드립니다 :)",
     available: false,
