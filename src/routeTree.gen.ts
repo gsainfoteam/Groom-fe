@@ -14,7 +14,6 @@ import { Route as rootRoute } from './routes/__root'
 import { Route as ProfileImport } from './routes/profile'
 import { Route as MyProfileImport } from './routes/myProfile'
 import { Route as ChatImport } from './routes/chat'
-import { Route as AboutImport } from './routes/about'
 import { Route as IndexImport } from './routes/index'
 
 // Create/Update Routes
@@ -37,12 +36,6 @@ const ChatRoute = ChatImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
-const AboutRoute = AboutImport.update({
-  id: '/about',
-  path: '/about',
-  getParentRoute: () => rootRoute,
-} as any)
-
 const IndexRoute = IndexImport.update({
   id: '/',
   path: '/',
@@ -58,13 +51,6 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexImport
-      parentRoute: typeof rootRoute
-    }
-    '/about': {
-      id: '/about'
-      path: '/about'
-      fullPath: '/about'
-      preLoaderRoute: typeof AboutImport
       parentRoute: typeof rootRoute
     }
     '/chat': {
@@ -95,7 +81,6 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
   '/chat': typeof ChatRoute
   '/myProfile': typeof MyProfileRoute
   '/profile': typeof ProfileRoute
@@ -103,7 +88,6 @@ export interface FileRoutesByFullPath {
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
   '/chat': typeof ChatRoute
   '/myProfile': typeof MyProfileRoute
   '/profile': typeof ProfileRoute
@@ -112,7 +96,6 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
   '/chat': typeof ChatRoute
   '/myProfile': typeof MyProfileRoute
   '/profile': typeof ProfileRoute
@@ -120,16 +103,15 @@ export interface FileRoutesById {
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/chat' | '/myProfile' | '/profile'
+  fullPaths: '/' | '/chat' | '/myProfile' | '/profile'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/chat' | '/myProfile' | '/profile'
-  id: '__root__' | '/' | '/about' | '/chat' | '/myProfile' | '/profile'
+  to: '/' | '/chat' | '/myProfile' | '/profile'
+  id: '__root__' | '/' | '/chat' | '/myProfile' | '/profile'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  AboutRoute: typeof AboutRoute
   ChatRoute: typeof ChatRoute
   MyProfileRoute: typeof MyProfileRoute
   ProfileRoute: typeof ProfileRoute
@@ -137,7 +119,6 @@ export interface RootRouteChildren {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  AboutRoute: AboutRoute,
   ChatRoute: ChatRoute,
   MyProfileRoute: MyProfileRoute,
   ProfileRoute: ProfileRoute,
@@ -154,7 +135,6 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
-        "/about",
         "/chat",
         "/myProfile",
         "/profile"
@@ -162,9 +142,6 @@ export const routeTree = rootRoute
     },
     "/": {
       "filePath": "index.tsx"
-    },
-    "/about": {
-      "filePath": "about.tsx"
     },
     "/chat": {
       "filePath": "chat.tsx"
